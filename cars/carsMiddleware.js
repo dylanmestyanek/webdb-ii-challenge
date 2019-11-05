@@ -15,7 +15,7 @@ const validateCar = (req, res, next) => {
 const validateCarId = (req, res, next) => {
     db.get(req.params.id)
         .then(car => {
-            if (car.length) {
+            if (car) {
                 req.car = car;
                 next();
             } else {

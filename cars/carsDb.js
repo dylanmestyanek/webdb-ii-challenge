@@ -2,7 +2,7 @@ const db = require("../data/dbConfig");
 
 const get = (id) => {
     return id
-        ? db('cars').where({ id })
+        ? db('cars').where({ id }).first()
         : db('cars');
 }
 

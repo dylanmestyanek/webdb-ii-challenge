@@ -14,11 +14,7 @@ router.get("/", (req, res) => {
 })
 
 // GET - Retrieve car by ID
-router.get("/:id", validateCarId, (req, res) => {
-    db.get(req.params.id)
-        .then(car => res.json(car))
-        .catch(err => res.status(500).json({ error: "Failed to get car data." }))
-})
+router.get("/:id", validateCarId, (req, res) => res.json(req.car))
 
 // POST - Add new car
 router.post("/", validateCar, (req, res) => {

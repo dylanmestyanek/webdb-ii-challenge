@@ -1,5 +1,6 @@
 const db = require("./carsDb");
 
+// Check if Car object exists AND has required properties
 const validateCar = (req, res, next) => {
     const newCar = req.body;
 
@@ -10,6 +11,7 @@ const validateCar = (req, res, next) => {
     } else next();
 };
 
+// Checks that Car ID exists in database
 const validateCarId = (req, res, next) => {
     db.get(req.params.id)
         .then(car => {

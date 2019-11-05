@@ -2,9 +2,9 @@ exports.seed = function(knex) {
   return knex('cars').truncate()
     .then(function () {
       return knex('cars').insert([
-        { VIN: 123459876, Make: "Toyota", Model: "Corolla", Mileage: 123456 },
-        { VIN: 987654321, Make: "Kia", Model: "Rio", Mileage: 123456, TitleStatus: "clean" },
-        { VIN: 123456789, Make: "Cheverolet", Model: "Silverado", Mileage: 254000, TitleStatus: "clean" }
+        { VIN: 123459876, make: "Toyota", model: "Corolla", mileage: 123456 },
+        { VIN: 987654321, make: "Kia", model: "Rio", mileage: 123456, title: "clean" },
+        { VIN: 123456789, make: "Cheverolet", model: "Silverado", mileage: 254000, title: "clean" }
       ]);
     });
 };

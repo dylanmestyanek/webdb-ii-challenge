@@ -5,14 +5,14 @@ exports.up = function(knex) {
         tbl.integer('VIN')
             .unique()
             .notNullable();
-        tbl.text('Make')
+        tbl.text('make')
             .notNullable();
-        tbl.text('Model')
+        tbl.text('model')
             .notNullable();
-        tbl.integer('Mileage')
+        tbl.integer('mileage')
             .notNullable();
-        tbl.text('TransmissionType');
-        tbl.text('TitleStatus');
+        tbl.text('transmission');
+        tbl.text('title');
     })
 };
 
